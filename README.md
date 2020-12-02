@@ -1,6 +1,5 @@
 ##Переводим аудио в текст используя asr Yandex SpeechKit
 
-
 #####Цель проекта - используя облачный сервис Яндекса переводить аудиозапись в текст, с помощью *ASR Yandex SpeechKit*
 
 ### Содержание:
@@ -30,6 +29,7 @@
 Подбробное описание действий : [инструкция](https://thecode.media/stt-cloud/)
 
 ###Полезные ссылки: 
+
 · [Документация SpeechKit](https://cloud.yandex.ru/docs/speechkit/stt/)
 
 · [Описание скрипта перевода текса в аудио с помощь SpeechKit](https://thecode.media/stt-python/)
