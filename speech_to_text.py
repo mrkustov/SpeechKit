@@ -93,13 +93,13 @@ def speech_to_text(api_key, filelink, result_file_name):
             f.write(str(chunk['alternatives'][0]['text']) + '\n')
     f.close()
 
+if __name__ == '__main__':
+	list_ogg = os.listdir(path=ogg_path)
 
-list_ogg = os.listdir(path=ogg_path)
-
-for audio in list_ogg:
-    print(audio)
-    file_path = str(ogg_path + '/' + audio)
-    result_file_name = str(audio[:(len(audio) - 4)] + '.ogg')
-    filelink = str(file_to_storage(file_path, bucket_name, result_file_name))
-    speech_to_text(api_key, filelink, result_file_name)
-print('Speech recognition completed')
+	for audio in list_ogg:
+    	print(audio)
+    	file_path = str(ogg_path + '/' + audio)
+    	result_file_name = str(audio[:(len(audio) - 4)] + '.ogg')
+    	filelink = str(file_to_storage(file_path, bucket_name, result_file_name))
+    	speech_to_text(api_key, filelink, result_file_name)
+	print('Speech recognition completed')
