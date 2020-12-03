@@ -36,11 +36,11 @@ def wav_to_ogg(wav_file_path, ogg_file_path, ogg_sample_rate, mono=False, left=T
 
 
 
+if __name__ == '__main__':
+	list_wav = os.listdir(path=wav_path)
 
-list_wav = os.listdir(path=wav_path)
 
-
-for audio in list_wav:
-    wav_file_path = str(wav_path + '/' + audio)
-    ogg_file_path = str(ogg_path + '/' + audio[:(len(audio)-4)] + '.ogg')
-    wav_to_ogg(wav_file_path, ogg_file_path, ogg_sample_rate)
+	for audio in list_wav:
+	    wav_file_path = str(wav_path + '/' + audio)
+	    ogg_file_path = str(ogg_path + '/' + audio[:	(len(audio)-4)] + '.ogg')
+	    wav_to_ogg(wav_file_path, ogg_file_path, 	ogg_sample_rate)
